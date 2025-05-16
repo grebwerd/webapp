@@ -8,10 +8,22 @@
 
 ## 📅 Phase 1: Define the Product
 
-(An Idea I had was to create a stock trading platform that recommends stocks using one of the free api providers. But, by all means if you have something you'd like to do, let's do it!)
-1. Write a one-paragraph project description.
-2. Identify 2–3 core features (e.g., search stock, see buy recommendations).
-3. Identify 1–2 nice-to-have features (e.g., user login, notifications).
+### Investment Portfolio Simulator
+#### Description:
+
+The application will allow the user to create a stock portfolio comprised of stocks found on large exchanges
+(NYSE, NASDAQ, FTSE...etc) and well known crypt currencies.
+
+#### Core functionality:
+
+The application will be REST based and allow the user to perform crud operations on their investment portfolio.
+
+A core feature will be to compare the user's portfolio performance against well known bench indices (S&P 500, DJIA, Nasdaq composite) for a
+specified range of time.
+
+#### Stretch goals:
+
+Create a notification to be sent to the user when a desired stock/cryto hits a specified price.
 
 ---
 
