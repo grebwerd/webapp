@@ -12,7 +12,7 @@
 #### Description:
 
 The application will allow the user to create a stock portfolio comprised of stocks found on large exchanges
-(NYSE, NASDAQ, FTSE...etc) and well known crypt currencies.
+(NYSE, NASDAQ, FTSE...etc) and well known cryptocurrencies.
 
 #### Core functionality:
 
@@ -23,7 +23,7 @@ specified range of time.
 
 #### Stretch goals:
 
-Create a notification to be sent to the user when a desired stock/cryto hits a specified price.
+Create a notification to be sent to the user when a desired stock/crypto hits a specified price.
 
 ---
 
