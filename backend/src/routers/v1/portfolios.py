@@ -8,6 +8,7 @@ from backend.src.models.portfolio import Portfolio
 
 router = APIRouter()
 BASE_PATH = "/v1/portfolios"
+PORTFOLIO_ID = "{portfolio_id}"
 
 @router.post(BASE_PATH)
 def create_portfolio(portfolio: Portfolio, session: SessionDep) -> Portfolio:
@@ -27,19 +28,19 @@ def read_portfolios(
     return portfolios
 
 
-@router.get(BASE_PATH+"/{portfolio_id}")
+@router.get(BASE_PATH + "/" + PORTFOLIO_ID)
 def read_portfolio(portfolio_id: int, session: SessionDep) -> Portfolio:
     portfolio = session.get(Portfolio, portfolio_id)
     if not portfolio:
-        raise HTTPException(status_code=404, detail="Hero not found")
+        raise HTTPException(status_code=404, detail="Portfolio not found")
     return portfolio
 
 
-@router.delete(BASE_PATH+"/{portfolio_id}")
+@router.delete(BASE_PATH + "/" + PORTFOLIO_ID)
 def delete_portfolio(portfolio_id: int, session: SessionDep) -> dict[str, bool]:
     portfolio = session.get(Portfolio, portfolio_id)
     if not portfolio:
-        raise HTTPException(status_code=404, detail="Hero not found")
+        raise HTTPException(status_code=404, detail="Portfolio not found")
     session.delete(portfolio)
     session.commit()
     return {"ok": True}

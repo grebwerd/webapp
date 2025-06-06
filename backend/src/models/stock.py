@@ -1,8 +1,5 @@
 from datetime import datetime
-from typing import Annotated
-
-from fastapi import Depends, FastAPI, HTTPException, Query
-from sqlmodel import Field, Session, SQLModel, create_engine, select
+from sqlmodel import Field, SQLModel
 
 
 class Stock(SQLModel, table=True):
@@ -11,7 +8,7 @@ class Stock(SQLModel, table=True):
     thirty_back_value: float = Field(nullable=False)
     sixty_back_value: float = Field(nullable=False)
     ninety_back_value: float = Field(nullable=False)
-    created_at: datetime = Field(nullable=False)
+    created_at: datetime = Field(nullable=False, default_factory=datetime.utcnow)
     updated_at: datetime = Field(nullable=True)
     deleted_at: datetime = Field(nullable=True)
 
