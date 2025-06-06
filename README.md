@@ -58,7 +58,7 @@ Create a notification to be sent to the user when a desired stock/crypto hits a 
 15. Add logic to pull stock data from the stock API.
 16. Store retrieved data in your database.
 17. Implement simple "buy signal" evaluation logic based on metrics.
-18. Wriite tests to get tot 100% unit coverage.
+18. Write tests to get tot 100% unit coverage.
 ---
 
 ## ⏰ Phase 6: Implement Scheduled Tasks
