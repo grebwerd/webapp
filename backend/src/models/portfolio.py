@@ -1,10 +1,5 @@
 from datetime import datetime
-
-
-
 from sqlmodel import Field,  SQLModel
-
-
 
 
 class Portfolio(SQLModel, table=True):
